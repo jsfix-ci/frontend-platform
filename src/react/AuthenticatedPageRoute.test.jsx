@@ -46,6 +46,9 @@ describe('AuthenticatedPageRoute', () => {
         </Router>
       </AppContext.Provider>
     );
+    /* TODO: JSFIX could not patch the breaking change:
+    Removed relative pathname support in hash history and memory history 
+    Suggested fix: Relative paths are no longer supportet by the hash/memory history, hence we recommend using the entire path name instead. */
     history.push('/authenticated');
     global.location.href = 'http://localhost/authenticated';
     mount(component);
@@ -70,6 +73,9 @@ describe('AuthenticatedPageRoute', () => {
         </Router>
       </AppContext.Provider>
     );
+    /* TODO: JSFIX could not patch the breaking change:
+    Removed relative pathname support in hash history and memory history 
+    Suggested fix: Relative paths are no longer supportet by the hash/memory history, hence we recommend using the entire path name instead. */
     history.push('/authenticated');
     mount(component);
     expect(getLoginRedirectUrl).not.toHaveBeenCalled();
@@ -93,6 +99,9 @@ describe('AuthenticatedPageRoute', () => {
         </Router>
       </AppContext.Provider>
     );
+    /* TODO: JSFIX could not patch the breaking change:
+    Removed relative pathname support in hash history and memory history 
+    Suggested fix: Relative paths are no longer supportet by the hash/memory history, hence we recommend using the entire path name instead. */
     history.push('/');
     const wrapper = mount(component);
 
@@ -117,6 +126,9 @@ describe('AuthenticatedPageRoute', () => {
         </Router>
       </AppContext.Provider>
     );
+    /* TODO: JSFIX could not patch the breaking change:
+    Removed relative pathname support in hash history and memory history 
+    Suggested fix: Relative paths are no longer supportet by the hash/memory history, hence we recommend using the entire path name instead. */
     history.push('/authenticated');
     const wrapper = mount(component);
     expect(getLoginRedirectUrl).not.toHaveBeenCalled();
